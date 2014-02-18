@@ -264,6 +264,17 @@ Queue/SRR set mtu_ 1000
 Queue/SRR set granularity_ 1000
 Queue/SRR set blimit_ 25000
 
+# IEEE802.3az Queue defaults
+Queue/GreenTail set drop_front_ false
+Queue/GreenTail set summarystats_ false
+Queue/GreenTail set queue_in_bytes_ false
+Queue/GreenTail set mean_pktsize_ 1000
+Queue/GreenTail set mode_ 0
+Queue/GreenTail set transition_time_ 0.0005
+Queue/GreenTail set sleep_transition_time_ 0.0005
+Queue/GreenTail set max_sleep_time_ 0.0025
+Queue/GreenTail set wake_q_th_ 10 
+
 Queue/CBQ set algorithm_ 0 ;# used by compat only, not bound
 Queue/CBQ set maxpkt_ 1024
 CBQClass set priority_ 0
