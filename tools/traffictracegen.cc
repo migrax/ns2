@@ -3,17 +3,17 @@
 /*  Date: Jan 2009 */
 /*  Copyright (C) Sergio Herreria 2009. All rights reserved. */
 
-#include <stdlib.h>
 #include "trafgen.h"
 
 class TrafficTraceGen : public TrafficGenerator {
 public:
-  TrafficTraceGen();
+  TrafficTraceGen() : tfile_(0) {};
   int command(int argc, const char*const* argv);
   virtual double next_interval(int &);
 protected:
   virtual void start();
   void timeout();
+private:
   FILE *tfile_;
 };
 
@@ -24,11 +24,6 @@ public:
     return(new TrafficTraceGen());
   }
 } class_traffictracegen;
-
-TrafficTraceGen::TrafficTraceGen()
-{
-  tfile_ = (FILE *)NULL;
-}
 
 int TrafficTraceGen::command(int argc, const char*const* argv)
 {
