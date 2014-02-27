@@ -62,8 +62,8 @@ void TrafficTraceGen::timeout()
 
 double TrafficTraceGen::next_interval(int& size)
 {
-  float interval;
-  if (fscanf(tfile_,"%e %d",&interval,&size) == EOF)
+  double interval;
+  if (fscanf(tfile_,"%lf %d",&interval,&size) == EOF)
     return -1;
   return(interval);
 }
