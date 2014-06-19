@@ -1590,3 +1590,18 @@ Agent/PBC set modulationScheme 0
 
 Agent/MDART set macFailed_ true
 Agent/MDART set etxMetric_ true
+
+# DRX
+Queue/DRX set drx_enabled_ true
+Queue/DRX set subframe_length_ 0.001
+Queue/DRX set inactivity_timer_ 10
+Queue/DRX set short_cycle_length_ 32
+Queue/DRX set short_cycle_timer_ 2
+Queue/DRX set long_cycle_length_ 128
+Queue/DRX set on_duration_timer_ 2
+Queue/DRX set short_to_active_length_ 0
+Queue/DRX set long_to_active_length_ 0
+Queue/DRX set queue_threshold_ 1
+Queue/DRX set time_threshold_ 1.0
+Queue/DRX set target_avg_delay_ 0.128 
+
